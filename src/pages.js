@@ -69,4 +69,17 @@ module.exports = {
       return res.send("Erro! Impossível salvar no banco de dados");
     }
   },
+  async listOrphanages(req, res) {
+    const db = await Database;
+    const results = await db.all("SELECT * FROM orphanages");
+    
+    return res.render("list-orphanages", { listOrphanages: results });
+  },
+  async deleteOrphanage(req, res) {
+    const id = req.body.id;
+    const db = await Database;
+    await db.run(`DELETE FROM orphanages WHERE id = "${id}"`);
+
+    return res.redirect("/orphanages");
+  }
 };

@@ -47,3 +47,13 @@ function selectImage(event) {
   //adiciona a classe active para esse botão
   button.classList.add("active");
 }
+
+function validate(event) {
+  const accept = confirm('Deseja realmente deletar?')
+
+  if(accept) {
+    return
+  } else {
+    event.preventDefault();   
+  }
+}

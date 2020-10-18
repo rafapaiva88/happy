@@ -54,3 +54,32 @@
   .button-select button:last-child {
     border-radius: 0 2rem 2rem 0;
 }
+
+.primary-button.delete {
+  margin-top: 6.4rem;
+
+  width: 16%;
+  height: 6.4rem;
+  border: 0;
+
+  cursor: pointer;
+
+  background: #ee3646;
+
+  border-radius: 2rem;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color .2s;
+  text-decoration: none;
+
+  margin-left: 45rem;
+  margin-bottom: -5rem;
+}
+
+.primary-button.delete:hover {
+  background: #cc3239;
+}

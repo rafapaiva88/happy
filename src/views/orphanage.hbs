@@ -97,6 +97,9 @@
             <img src="/images/whatsapp.svg" alt="Chamar no whatsapp" />
             Entrar em contato
           </a>
+          <form type="hidden" action="delete-orphanage" method="post" onsubmit="validate(event)">
+          <button name="id" value="{{orphanage.id}}" class="primary-button delete" type="submit">Deletar</button>
+          </form>
         </div>
       </div>
     </main>
